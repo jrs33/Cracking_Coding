@@ -13,7 +13,7 @@ def isInsertOrRemove(longString, shortString):
 
     lastWasDifferent = False
 
-    for i in range(len(longString)):
+    for i in range(len(shortString)):
         if(longString[lIterator] == shortString[sIterator]):
             lIterator = lIterator + 1
             sIterator = sIterator + 1
@@ -28,8 +28,15 @@ def isInsertOrRemove(longString, shortString):
 
 def isReplaced(oneString, twoString):
 
+    lastWasDifferent = False
+
     for i in range(len(oneString)):
-        
+        if(oneString[i] != twoString[i]):
+            if(lastWasDifferent):
+                return False
+            else:
+                lastWasDifferent = True
+    return True
 
 def oneAway(oneString, twoString):
 
@@ -48,4 +55,7 @@ def oneAway(oneString, twoString):
 
     return boolResult
 
+print(oneAway("pales","pale"))
 print(oneAway("pale","ple"))
+print(oneAway("pale","bale"))
+print(oneAway("pale","bake"))
