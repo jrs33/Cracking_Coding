@@ -76,3 +76,10 @@ import java.util.*;
     }
 
   }
+
+//
+// Here, this algorithm would run in O(n) time, which is the best we can get
+// and does so in place by comparing the original list to the in place reversed list
+// (courtesy to the help of the geeks for geeks group on helping me refresh my OOP 
+// Java syntax)
+//
