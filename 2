@@ -1,0 +1,19 @@
+import string
+
+def dateFormater(original, inPattern, outPattern):
+
+	separator = ""
+
+	# Extracting the separator
+	for char in inPattern:
+		if not char.isalnum():
+			separator = char
+			break
+
+	inArr = inPattern.split(separator)
+	origArr = original.split(separator)
+
+	print(inArr)
+	print(origArr)
+
+dateFormater("08#09#1420","mm#dd#yyyy","dd\yyyy\mm")
